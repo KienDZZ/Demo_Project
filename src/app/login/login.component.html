@@ -1,0 +1,29 @@
+<div class="container">
+  <form class="login-form" [formGroup]="loginForm">
+    <h2>Sign in</h2>
+    <div class="row-control">
+      <mat-form-field appearance="outline">
+        <mat-label>Username</mat-label>
+        <input matInput placeholder="Username"  formControlName="username"/>
+        <mat-error *ngIf="loginForm.get('username')?.errors?.['required']"> User name is required</mat-error>
+        <mat-error *ngIf="loginForm.get('username')?.errors?.['pattern']"> invalid input</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="row-control">
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input type="password" matInput placeholder="Password" formControlName="password" />
+        <mat-error *ngIf="loginForm.get('password')?.errors?.['required']"> Password name is required</mat-error>
+        <mat-error *ngIf="loginForm.get('password')?.errors?.['pattern']"> invalid input</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="row-control">
+      <mat-checkbox formControlName="rememberMe">Remember password</mat-checkbox>
+    </div>
+    <div class="row-control row-actions">
+      <button mat-raised-button type="submit" [disabled]="loginForm.invalid">Login</button>
+    </div>
+    <p>If you don't have an account <a routerLink="/register">Register</a></p>  
+  </form>
+</div>
+ 

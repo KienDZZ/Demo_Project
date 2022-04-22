@@ -1,0 +1,33 @@
+.container{
+    background-color: white;
+    width: 600px;
+    height: 500px;
+    border: 1px solid #000000;
+    padding: 100px 100px 100px 100px ;
+    margin: auto;
+}
+.register-form{
+    margin: 50px;
+}
+button{
+    margin: 0px 420px;
+}
+
+mat-form-field{
+    width: 500px;
+    margin: auto;
+    // color: #82ad38;
+}
+h2{
+    color: #82ad38;
+}
+mat-label{
+    color: #82ad38;
+}
+button{
+    background-color: #82ad38;
+}
+.confirmPass{
+    font-size: 11px;
+    color: red;
+}
